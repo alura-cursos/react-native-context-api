@@ -1,14 +1,7 @@
 import { Text, View, Image, TouchableOpacity } from 'react-native';
-import { useContext } from 'react';
-import { ProdutosContext } from '../../contexts/ProdutosContext';
 import { estilos } from './estilos'
 
 export function Produto({item}) {
-
-  const {
-    viuProduto
-  } = useContext(ProdutosContext);
-
   return (
     <View style={estilos.cartao}>
       <Image style={estilos.imagem} source={item.imagem}/>
@@ -16,7 +9,7 @@ export function Produto({item}) {
         <Text style={estilos.texto}>{item.texto}</Text>
         <Text style={estilos.preco}>R$ {item.preco}</Text>
       </View>
-      <TouchableOpacity style={estilos.botaoAdicionar} onPress={() => viuProduto(item)}>
+      <TouchableOpacity style={estilos.botaoAdicionar} onPress={() => {}}>
         <Text style={estilos.botaoTexto}>+</Text>
       </TouchableOpacity>
     </View>

@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
+import { tema } from '../../estilosGlobais';
 
-export const estilos = (tema) => {
-  return StyleSheet.create({
+export const estilo = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: tema.fundo,
@@ -27,4 +27,3 @@ export const estilos = (tema) => {
       justifyContent: 'center',
     },
   });
-}
