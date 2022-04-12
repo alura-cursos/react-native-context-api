@@ -6,7 +6,7 @@ export const estilos = (tema) => {
   container: {
     flex: 1,
     backgroundColor: tema.fundo,
-    alignItems: 'center',
+    alignItems: 'stretch',
     justifyContent: 'center',
   },
   tituloArea: {
@@ -60,6 +60,19 @@ export const estilos = (tema) => {
     fontSize: 12,
     fontWeight: 'bold',
     color: "#fff",
+  },
+  botao: {
+    margin: 16,
+    marginBottom: 32,
+    paddingVertical: 16,
+    borderRadius: 10,
+    backgroundColor: tema.botao,
+  },
+  botaoTexto: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: tema.preto,
+    textAlign: 'center',
   },
 })
 }

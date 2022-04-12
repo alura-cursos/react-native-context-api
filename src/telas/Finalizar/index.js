@@ -1,4 +1,4 @@
-import { Text, View, StatusBar, Button, Alert } from 'react-native';
+import { Text, View, StatusBar, Button, Alert, TouchableOpacity } from 'react-native';
 import { ProdutosContext } from '../../contexts/ProdutosContext';
 import { AutenticacaoContext } from '../../contexts/AutenticacaoContext';
 import { TemaContext } from '../../contexts/TemaContext';
@@ -32,6 +32,7 @@ export default function Finalizar({ navigation }) {
     <View style={estilo.container}>
       <StatusBar />
       <View style={estilo.enderecoArea}>
+        <Text style={estilo.titulo}>Informações de entrega</Text>
         <Text style={estilo.texto}>Nome: {usuario.nome}</Text>
         <Text style={estilo.texto}>Endereço: {usuario.endereco}</Text>
         <Text style={estilo.texto}>Email: {usuario.email}</Text>
@@ -39,9 +40,14 @@ export default function Finalizar({ navigation }) {
       </View>
       <View style={estilo.resumoArea}>
         <Text style={estilo.texto}>Quantidade: {quantidade}</Text>
-        <Text style={estilo.texto}>Preço Total: {precoTotal}</Text>
+        <Text style={estilo.texto}>Preço Total: R$ {precoTotal}</Text>
       </View>
-      <Button title="Finalizar" onPress={() => finalizar()} />
+      <TouchableOpacity 
+        style={estilo.botao} 
+        onPress={() => finalizar()} 
+      >
+        <Text style={estilo.botaoTexto}>Finalizar</Text>
+      </TouchableOpacity>
     </View>
   );
 }

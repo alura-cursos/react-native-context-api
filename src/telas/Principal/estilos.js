@@ -61,5 +61,12 @@ export const estilos = (tema) => {
     fontWeight: 'bold',
     color: "#fff",
   },
+  iconArea: {
+    marginLeft: 16,
+  },
+  icon: {
+    color: tema.texto,
+    fontSize: 30,
+  },
 })
 }

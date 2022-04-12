@@ -43,15 +43,6 @@ export const estilos = (tema) => {
       fontSize: 18,
       fontWeight: '400',
       color: tema.preto,
-    },
-    iconArea: {
-      position: 'absolute',
-      top: Constants.statusBarHeight + 10,
-      right: 20,
-    },
-    icon: {
-      color: tema.texto,
-      fontSize: 30,
-    },
+    }
   });
 }

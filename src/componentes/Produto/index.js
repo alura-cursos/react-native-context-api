@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { ProdutosContext } from '../../contexts/ProdutosContext';
 import { estilos } from './estilos'
 
-export function Produto({item}) {
+export function Produto({item, visualizado}) {
 
   const {
     viuProduto
@@ -13,12 +13,13 @@ export function Produto({item}) {
     <View style={estilos.cartao}>
       <Image style={estilos.imagem} source={item.imagem}/>
       <View style={estilos.textoContainer}>
-        <Text style={estilos.texto}>{item.texto}</Text>
+        <Text style={estilos.texto} numberOfLines={1}>{item.texto}</Text>
         <Text style={estilos.preco}>R$ {item.preco}</Text>
       </View>
+      { visualizado &&
       <TouchableOpacity style={estilos.botaoAdicionar} onPress={() => viuProduto(item)}>
         <Text style={estilos.botaoTexto}>+</Text>
-      </TouchableOpacity>
+      </TouchableOpacity>}
     </View>
   );
 }

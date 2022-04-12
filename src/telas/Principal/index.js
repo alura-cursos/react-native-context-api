@@ -7,6 +7,7 @@ import { estilos } from './estilos';
 import { useContext } from 'react';
 import { Feather } from 'react-native-vector-icons'
 import { produtos } from './produtos';
+import MaterialCommunityIcons from 'react-native-vector-icons/Feather';
 
 export default function Principal({navigation}) {
   const {
@@ -33,16 +34,20 @@ export default function Principal({navigation}) {
           <TouchableOpacity onPress={() => navigation.navigate('Resumo')}>
             <Feather name="shopping-cart" size={30} color="#fff" style={estilo.carrinhoIcon} />
           </TouchableOpacity>
+          {quantidade > 0 &&
           <View style={estilo.carrinhoQuantidadeArea}>
             <Text style={estilo.carrinhoQuantidade}>{quantidade}</Text>  
-          </View>
+          </View>}
+          <TouchableOpacity onPress={() => navigation.navigate('Configurações')} style={estilo.iconArea} >
+            <MaterialCommunityIcons name="settings" size={30} color="#fff" style={estilo.icon} />
+          </TouchableOpacity>
         </View>
       </View>
 
       <FlatList
         data={produtos}
         keyExtractor={item => Math.random()}
-        renderItem={({ item }) => <Produto item={item} />}
+        renderItem={({ item }) => <Produto item={item} visualizado={true}/>}
         style={estilo.lista}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={() =>
@@ -53,7 +58,7 @@ export default function Principal({navigation}) {
                 <FlatList
                   data={ultimosVistos}
                   keyExtractor={item => Math.random()}
-                  renderItem={({ item }) => <Produto item={item} />}
+                  renderItem={({ item }) => <Produto item={item} visualizado={false} />}
                   style={estilo.lista}
                   horizontal
                   showsHorizontalScrollIndicator={false}
