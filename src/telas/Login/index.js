@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Text, View, TextInput, TouchableOpacity, StatusBar } from 'react-native';
 import { estilo } from './estilos';
-import MaterialCommunityIcons from 'react-native-vector-icons/Feather';
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
@@ -10,11 +9,6 @@ export default function Login({ navigation }) {
   return (
     <View style={estilo.container}>
       <StatusBar />
-
-      <TouchableOpacity onPress={() => navigation.navigate('Configurações')} style={estilo.iconArea} >
-        <MaterialCommunityIcons name="settings" size={30} color="#fff" style={estilo.icon} />
-      </TouchableOpacity>
-
       <Text style={estilo.titulo}>Login</Text>
 
       <View style={estilo.inputArea}>

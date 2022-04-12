@@ -5,6 +5,7 @@ export const estilos = new StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    minWidth: 250,
     marginHorizontal: 16,
     marginVertical: 8,
     padding: 16,
@@ -26,13 +27,14 @@ export const estilos = new StyleSheet.create({
   },
   textoContainer: {
     flex: 1,
-    marginHorizontal: 8,
+    marginHorizontal: 16,
     justifyContent: "space-between",
   },
   texto: {
     fontSize: 18,
     fontWeight: "700",
     marginBottom: 8,
+    maxWidth: 200,
   },
   preco: {
     color: "#5E9B71",

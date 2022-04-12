@@ -1,8 +1,10 @@
 import { Text, View, FlatList, StatusBar, TouchableOpacity } from 'react-native';
 import { Produto } from '../../componentes/Produto';
+import { produtos } from './produtos';
 import { estilo } from './estilos';
 import { Feather } from 'react-native-vector-icons'
-import { produtos } from './produtos';
+import MaterialCommunityIcons from 'react-native-vector-icons/Feather';
+
 
 export default function Principal({navigation}) {
   const ultimosVistos = []
@@ -19,13 +21,16 @@ export default function Principal({navigation}) {
           <View style={estilo.carrinhoQuantidadeArea}>
             <Text style={estilo.carrinhoQuantidade}>0</Text>  
           </View>
+          <TouchableOpacity onPress={() => navigation.navigate('Configurações')} style={estilo.iconArea} >
+            <MaterialCommunityIcons name="settings" size={30} color="#fff" style={estilo.icon} />
+          </TouchableOpacity>
         </View>
       </View>
 
       <FlatList
         data={produtos}
         keyExtractor={item => Math.random()}
-        renderItem={({ item }) => <Produto item={item} />}
+        renderItem={({ item }) => <Produto item={item} adicionar={true} />}
         style={estilo.lista}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={() =>
@@ -36,7 +41,7 @@ export default function Principal({navigation}) {
                 <FlatList
                   data={ultimosVistos}
                   keyExtractor={item => Math.random()}
-                  renderItem={({ item }) => <Produto item={item} />}
+                  renderItem={({ item }) => <Produto item={item} adicionar={false} />}
                   style={estilo.lista}
                   horizontal
                   showsHorizontalScrollIndicator={false}

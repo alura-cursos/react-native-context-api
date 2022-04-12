@@ -61,4 +61,11 @@ export const estilo = StyleSheet.create({
     fontWeight: 'bold',
     color: "#fff",
   },
+  iconArea: {
+    marginLeft: 16,
+  },
+  icon: {
+    color: tema.texto,
+    fontSize: 30,
+  },
 });
