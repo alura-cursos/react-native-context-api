@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { tema } from '../../estilosGlobais';
 
-export const estilo = StyleSheet.create({
+export const estilos = (tema) => {
+  return StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: tema.fundo,
@@ -44,3 +44,4 @@ export const estilo = StyleSheet.create({
     color: tema.preto,
   }
 });
+}
