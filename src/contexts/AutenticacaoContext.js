@@ -12,7 +12,7 @@ export function AutenticacaoProvider( {children} ) {
       setUsuario({
         nome: 'André',
         email: email,
-        endereco: 'Rua dos bacana',
+        endereco: 'Rua dos bacanas',
         telefone: '(11)999999999'
       })
       return 'ok'
