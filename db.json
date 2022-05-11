@@ -1,16 +1,3 @@
 {
-  "produtos": [
-    {
-      "imagem": 20,
-      "texto": "Mesa chique",
-      "preco": 200,
-      "id": 1
-    },
-    {
-      "imagem": 22,
-      "texto": "Cadeira de trabalho",
-      "preco": 150,
-      "id": 2
-    }
-  ]
+  "produtos": []
 }
