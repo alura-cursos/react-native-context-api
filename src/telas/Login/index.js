@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { Text, View, TextInput, TouchableOpacity, StatusBar } from 'react-native';
 import { estilo } from './estilos';
+import { useContext } from "react";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+
+  const { name, setName } = useContext(GlobalContext);
 
   return (
     <View style={estilo.container}>
@@ -17,8 +21,8 @@ export default function Login({ navigation }) {
           placeholder="Email"
           placeholderTextColor="#999"
           autoCapitalize="none"
-          value={email}
-          onChangeText={setEmail}
+          value={name}
+          onChangeText={setName}
         />
         <TextInput
           style={estilo.input}
