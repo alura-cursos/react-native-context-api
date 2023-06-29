@@ -1,21 +1,21 @@
 import { Text, View, FlatList, StatusBar, TouchableOpacity } from 'react-native';
 import { Produto } from '../../componentes/Produto';
 import { produtos } from './produtos';
-import { estilo } from './estilos';
+import { estilos } from './estilos';
 import { Feather } from 'react-native-vector-icons'
 import MaterialCommunityIcons from 'react-native-vector-icons/Feather';
 import { useContext } from 'react';
-import { GlobalContext } from '../../contexts/GlobalContext';
+import { TemaContext } from '../../contexts/TemaContext';
 
 export default function Principal({navigation}) {
   const ultimosVistos = []
-  const { name } = useContext(GlobalContext);
-
+  const {temaEscolhido} = useContext(TemaContext);
+  const estilo = estilos(temaEscolhido)
   return (
     <View style={estilo.container}>
       <StatusBar />
       <View style={estilo.tituloArea}>
-        <Text style={estilo.titulo}>Olá, {name}</Text>
+        <Text style={estilo.titulo}>Olá, NOME</Text>
         <View style={estilo.carrinhoArea}>
           <TouchableOpacity onPress={() => {}}>
             <Feather name="shopping-cart" size={30} color="#fff" style={estilo.carrinhoIcon} />
