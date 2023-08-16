@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { TemaContext } from '../../contexts/TemaContext';
 
 export default function Configuracao({ navigation }) {
-  const {temaAtual, setTemaAtual, temaEscolhido} = useContext(TemaContext);
+  const {temaAtual, temaEscolhido, salvarTema} = useContext(TemaContext);
   const estilo = estilos(temaEscolhido)
   return (
     <View style={estilo.container}>
@@ -13,7 +13,7 @@ export default function Configuracao({ navigation }) {
       <View style={estilo.inputArea}>
       <Text style={estilo.subtitulo}>Tema: {temaAtual}</Text>
       <Switch
-        onValueChange={() => temaAtual === "dark" ? setTemaAtual("light") : setTemaAtual("dark")}
+        onValueChange={() => temaAtual === "dark" ? salvarTema("light") : salvarTema("dark")}
         value={temaAtual === "dark" ? true : false}
       />
       </View>
