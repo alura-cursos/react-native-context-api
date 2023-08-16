@@ -1,0 +1,14 @@
+{
+    "produtos":[
+        {
+            "imagem": "imagemTenis",
+            "texto": "Tenis bacana",
+            "preco": 100.00
+          },
+          {
+            "imagem": "imagemMesa",
+            "texto": "Mesa chique",
+            "preco": 200.00
+          }
+    ]
+}
