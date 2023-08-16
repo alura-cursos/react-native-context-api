@@ -1,14 +1,22 @@
 {
-    "produtos":[
-        {
-            "imagem": "imagemTenis",
-            "texto": "Tenis bacana",
-            "preco": 100.00
-          },
-          {
-            "imagem": "imagemMesa",
-            "texto": "Mesa chique",
-            "preco": 200.00
-          }
-    ]
+  "produtos": [
+    {
+      "imagem": 3,
+      "texto": "Tenis bacana",
+      "preco": 100,
+      "id": 1
+    },
+    {
+      "imagem": 4,
+      "texto": "Mesa chique",
+      "preco": 200,
+      "id": 2
+    },
+    {
+      "imagem": 5,
+      "texto": "Camisa bonita",
+      "preco": 80,
+      "id": 3
+    }
+  ]
 }
