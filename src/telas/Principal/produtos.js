@@ -8,26 +8,26 @@ export const produtos = [
   {
     imagem: imagemTenis,
     texto: "Tenis bacana",
-    preco: 100.00
+    preco: 100.90
   },
   {
     imagem: imagemMesa,
     texto: "Mesa chique",
-    preco: 200.00
+    preco: 200.10
   },
   {
     imagem: imagemCamisa,
     texto: "Camisa bonita",
-    preco: 80.00
+    preco: 80.09
   },
   {
     imagem: imagemCadeira,
     texto: "Cadeira de trabalho",
-    preco: 150.00
+    preco: 150.55
   },
   {
     imagem: imagemSofa,
     texto: "Sofá confortavel",
-    preco: 250.00
+    preco: 250.48
   },
 ]

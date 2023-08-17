@@ -1,6 +1,7 @@
 import { createContext, useEffect } from "react";
 import { useState } from "react";
-import { postProduto, getProdutos } from "../servicos/requisicoes/produtos";
+import { postProduto, getProdutos, deleteProdutos } from "../servicos/requisicoes/produtos";
+import { Alert } from "react-native";
 
 export const ProdutosContext = createContext({});
 
@@ -31,9 +32,19 @@ export function ProdutosProvider({children}){
 
     }
 
+    async function deletarProdutos(){
+        const deleteProd = await deleteProdutos();
+        if(deleteProd === null){
+            Alert.alert("Erro ao deletar produtos");
+            return;
+        }
+        setQuantidade(0);
+        setCarrinho([]);
+    }
+
     return(
         <ProdutosContext.Provider value={{
-            quantidade, carrinho, ultimosVistos, adicionarProduto
+            quantidade, carrinho, ultimosVistos, adicionarProduto, deletarProdutos
         }}>
             {children}
         </ProdutosContext.Provider>

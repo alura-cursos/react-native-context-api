@@ -19,3 +19,22 @@ export async function getProdutos() {
         return null;
     }
 }
+
+export async function deleteProdutos() {
+    const produtos = await getProdutos();
+    if(produtos.length > 0){
+        produtos.forEach(async (produto) => {
+            await deleteProduto(produto.id);
+        })
+    }
+}
+
+async function deleteProduto(id) {
+    try{
+        const resposta = await api.delete(`/produtos/${id}`);
+        return resposta.data;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}

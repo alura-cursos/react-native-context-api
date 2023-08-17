@@ -5,9 +5,10 @@ export const estilos = (tema) =>{
   return StyleSheet.create({
   container: {
     flex: 1,
+    padding: 16,
     backgroundColor: tema.fundo,
     alignItems: 'stretch',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
   tituloArea: {
     width: '100%',
@@ -22,58 +23,12 @@ export const estilos = (tema) =>{
     fontWeight: 'bold',
     color: tema.titulo,
   },
-  lista: {
-    flex: 1,
-    width: '100%',
-  },
-  ultimosVistos: {
-    marginBottom: 16,
-    paddingVertical: 16,
-    backgroundColor: tema.ultimosVistos,
-  },
-  tituloUltimosVistos: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: tema.titulo,
-    marginHorizontal: 16,
-    marginBottom: 8,
-  },
-  carrinhoArea: {
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
-  },
-  carrinhoIcon: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: tema.titulo,
-  },
-  carrinhoQuantidadeArea: {
-    backgroundColor: 'red',
-    borderRadius: 10,
-    width: 20,
-    height: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  carrinhoQuantidade: {
-    fontSize: 12,
-    fontWeight: 'bold',
-    color: "#fff",
-  },
-  iconArea: {
-    marginLeft: 16,
-  },
-  icon: {
-    color: tema.texto,
-    fontSize: 30,
-  },
   botao: {
-    margin: 16,
     marginBottom: 32,
     paddingVertical: 16,
     borderRadius: 10,
     backgroundColor: tema.botao,
+    justifyContent: 'flex-end',
   },
   botaoTexto: {
       fontSize: 18,
@@ -81,5 +36,39 @@ export const estilos = (tema) =>{
       color: tema.preto,
       textAlign: 'center',
   },
+  viewComponent: {
+    backgroundColor: tema.bgFinalizacao,
+    padding: 16,
+    width: '100%',
+    marginBottom: 16,
+  },
+  finalizacaoAreaTitulo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  finalizacaoTitulo: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: tema.titulo,
+    marginLeft: 8,
+  },
+  finalizacaoIcon: {
+    marginBottom: 8,
+    color: tema.titulo,
+    fontSize: 26,
+  },
+  tituloArea: {
+    width: '100%',
+    marginBottom: 16,
+  },
+  titulo: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: tema.titulo,
+  },
+  finalizarTxt: {
+    fontSize: 16,
+    color:tema.titulo,
+  }
 });
 };
